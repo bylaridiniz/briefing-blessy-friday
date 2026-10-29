@@ -124,7 +124,7 @@ h2 small { display: block; font-size: 13.5px; font-weight: 400; color: var(--sof
 .day.k-mes { background: var(--yellow-soft); border-color: var(--yellow); }
 .day.k-end { background: var(--mint); border-color: var(--mint); }
 .day[aria-pressed="true"] { outline: 2.5px solid var(--green); outline-offset: 2px; }
-.day.today::after { content: 'hoje'; position: absolute; left: 0; right: 0; bottom: -15px; font-size: 9.5px; font-weight: 700; color: var(--green); }
+.day.today::after { content: 'hoje'; position: absolute; left: 0; right: 0; bottom: -19px; line-height: 1; font-size: 9.5px; font-weight: 700; color: var(--green); }
 .day:focus-visible { outline: 2.5px solid var(--green); outline-offset: 2px; }
 .daycard { margin-top: 24px; border: 1.5px solid var(--line); border-radius: 16px; padding: 16px 18px; display: grid; gap: 8px; }
 .daycard .when { font-size: 12px; font-weight: 700; color: var(--green); text-transform: uppercase; letter-spacing: 0.06em; }
@@ -375,6 +375,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .stack > section { scroll-margin-top: 76px; }
 .cal-wrap { display: grid; grid-template-columns: minmax(0, 400px) minmax(0, 1fr); gap: 24px; align-items: start; }
 .cal-wrap .days { max-width: none; }
+.days { row-gap: 26px; }
 .cal-wrap .daycard { margin-top: 26px; background: #fff; border-color: var(--line); min-height: 220px; align-content: start; }
 .cal-wrap .daycard.k-open { background: var(--yellow); border-color: var(--yellow); }
 .cal-wrap .daycard.k-mes { background: var(--yellow-soft); border-color: var(--yellow); }
