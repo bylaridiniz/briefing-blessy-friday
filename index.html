@@ -169,6 +169,7 @@ h2 small { display: block; font-size: 13.5px; font-weight: 400; color: var(--sof
 .ideas { list-style: none; border: 1.5px solid var(--line); border-radius: 16px; overflow: hidden; }
 .idea { display: grid; grid-template-columns: 30px 1fr; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--line); }
 .idea:last-child { border-bottom: 0; }
+.idea[hidden] { display: none; }
 .idea.done { background: #fafbf9; }
 .tick { width: 28px; height: 28px; border-radius: 50%; border: 2px solid #cfd6d1; background: #fff; cursor: pointer; display: grid; place-items: center; color: transparent; font-size: 15px; font-weight: 700; margin-top: 1px; }
 .idea.done .tick { background: var(--green); border-color: var(--green); color: var(--yellow); }
@@ -618,28 +619,28 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 <script>
 (function () {
   var ideas = [
-    ['identificação','toda a etapa','sabe quando a calça fecha de manhã e de noite não fecha mais?','situação que muita mulher já viveu. conte a sua versão e só no final mostre a Blessy.'],
-    ['identificação','toda a etapa','se você chega no fim do dia toda estufada, fica aqui','fale com quem está do outro lado: como era o seu dia antes e como é hoje.'],
-    ['quebra de crença','toda a etapa','eu achava que era normal viver inchada','a virada da sua história: o que você aceitava e o que mudou com a constância.'],
-    ['quebra de crença','toda a etapa','viver estufada não é frescura, tá?','valide a dor e mostre a Blessy como parte do seu cuidado, sem prometer prazo.'],
-    ['erro nomeado','toda a etapa','se você toma sua Blessy assim, tá errado','mostre o jeito certo: água gelada, mexer bem e beber logo. depois, a oferta.'],
-    ['erro nomeado','toda a etapa','o erro que eu cometi no meu primeiro pote de Blessy','pular dias. por isso o kit de 3 faz sentido: 4 meses sem parar.'],
-    ['curiosidade','29/10 a 05/11','o que vem no kit de 3 potes','mostre a arte do kit: 3 potes, o pote extra e a garrafa de brinde.'],
-    ['curiosidade','toda a etapa','por que eu nunca compro só 1 pote','a conta do kit de 3, com o valor por mês na tela.'],
-    ['curiosidade','04/11','reagindo aos preços da Blessy Friday','a trend que mais funcionou na Black de 2025: kit por kit, preço na tela.'],
-    ['contraintuitivo','toda a etapa','o kit mais caro é o que sai mais barato, eu te explico','R$ 484,90 por 4 potes: uns R$ 121 por pote, contra R$ 189,90 no avulso.'],
-    ['número','toda a etapa','3 motivos pra você não deixar pra depois','a garrafa, o pote extra e o frete grátis. os dois primeiros só vão até 11/11.'],
-    ['número','toda a etapa','4 meses de Blessy por uns R$ 4 por dia','faça a conta na tela e compare com algo que você compra todo dia.'],
-    ['frase do cotidiano','toda a etapa','"o que você tá tomando?"','a pergunta que você mais ouve. responda com a sua experiência e o link.'],
-    ['frase do cotidiano','06 a 09/11','a primeira coisa que entra na minha lista do mês','salário caiu, cartão virou: a Blessy entre as compras do mês que você não deixa faltar.'],
-    ['quiz','06 a 09/11','qual kit da Blessy tem a sua cara?','1 pote pra experimentar, 2 pra dividir, 3 pra não parar. termine com a caixinha.'],
-    ['vem comigo','toda a etapa','vem comigo preparar minha Blessy','preparo no copo transparente, falando o sabor. a oferta entra no final.'],
-    ['vem comigo','toda a etapa','vem comigo fazer a conta do kit de 3','calculadora na mão, conta feita junto com quem assiste.'],
-    ['manchete','29 e 30/10','gente, a Black da Blessy já começou','leia a chamada como notícia e comente a oferta em seguida.'],
-    ['gancho de perda','10 e 11/11','corre, que dia 11 isso aqui sai do kit','mostre a arte do kit com a garrafa e o pote extra, e o prazo de 23h59 na tela.'],
-    ['gancho de perda','10 e 11/11','a garrafa vai acabar e eu te avisei','reta final: fale do "enquanto durar" e entregue o caminho, link e cupom.']
+    ['sua história','toda a etapa','eu vivia estufada no fim do dia e achava normal','conte como era antes e o que mudou com a constância. a Blessy aparece só no final.'],
+    ['sua história','toda a etapa','sabe quando a calça fecha de manhã e de noite não fecha mais?','conte a sua versão dessa cena e depois mostre o que entrou no seu dia.'],
+    ['sua história','toda a etapa','faz tempo que eu tomo Blessy todo dia, vou ser sincera','fale o que você sente de diferença, sem prometer resultado nem prazo.'],
+    ['sua história','toda a etapa','o erro que eu cometi no meu primeiro pote','pular dias. conte isso e mostre por que o kit de 3 ajuda a não parar.'],
+    ['como eu tomo','toda a etapa','como eu tomo minha Blessy todo dia','preparo no copo transparente, falando o sabor e o horário que você toma.'],
+    ['como eu tomo','toda a etapa','o jeito que eu mais gosto de tomar Blessy','água bem gelada, mexer bem e beber logo. mostre o seu jeito.'],
+    ['como eu tomo','toda a etapa','maracujá ou abacaxi com hortelã? deixa eu provar os dois','compare os dois sabores mais vendidos e diga qual é o seu preferido.'],
+    ['mostrando o kit','29/10 a 05/11','olha o que vem no kit de 3 da Blessy Friday','mostre os 3 potes, o pote extra e a garrafa de presente.'],
+    ['mostrando o kit','toda a etapa','comprou, ganhou presente. vou te mostrar qual','passe pelos 3 kits: canudo no de 1, garrafa no de 2, garrafa e pote extra no de 3.'],
+    ['mostrando o kit','toda a etapa','se você fosse comprar hoje, levaria qual kit?','enquete nos stories com 1, 2 ou 3 potes. quem responder, chame no direct.'],
+    ['fazendo a conta','toda a etapa','por que eu nunca compro só 1 pote','faça a conta do kit de 3 na tela, pote por pote.'],
+    ['fazendo a conta','toda a etapa','o kit mais caro sai mais barato, olha só','R$ 484,90 por 4 potes: uns R$ 121 por pote, contra R$ 189,90 no avulso.'],
+    ['fazendo a conta','04/11','reagindo aos preços da Blessy Friday','a trend que mais funcionou na Black de 2025: kit por kit, preço na tela.'],
+    ['fazendo a conta','06 a 09/11','a primeira coisa que entra na minha lista do mês','salário caiu, cartão virou: a Blessy entre as compras do mês que você não deixa faltar.'],
+    ['respondendo dúvida','toda a etapa','me perguntaram o que eu tô tomando, então lá vai','responda com a sua experiência e deixe o link e o cupom.'],
+    ['respondendo dúvida','toda a etapa','Blessy tem gosto bom? vou te responder sincera','prove na frente da câmera e fale do sabor do jeito que você sente.'],
+    ['respondendo dúvida','toda a etapa','vale a pena comprar agora ou esperar?','explique que os presentes são enquanto durarem e que essa etapa acaba dia 11.'],
+    ['reta final','10 e 11/11','corre, que dia 11 a garrafa sai do kit','mostre o kit com a garrafa e o pote extra, com o prazo na tela.'],
+    ['reta final','11/11','hoje é o último dia pra ganhar a garrafa','prazo de 23h59 na tela, link e cupom. repita ao longo do dia.'],
+    ['reta final','11/11','se você tava esperando pra comprar, é hoje','fale com quem ficou na dúvida e entregue o caminho: link e cupom.']
   ];
-  var KEY = 'bf-etapa1-ideias';
+  var KEY = 'bf-etapa1-ideias-v2';
   var done = {};
   try { done = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { done = {}; }
   var save = function () { try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) {} };
@@ -684,20 +685,20 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   });
 
   var plan = [
-    ['2026-10-29','qui','open','abertura da etapa 1','dia de aparecer. sequência de abertura nos stories e o primeiro Reels da etapa.',['stories: abriu a Blessy Friday','Reels: o presente da etapa 1'],'gente, a Black da Blessy já começou'],
-    ['2026-10-30','sex','','o preparo','prepare sua Blessy num copo transparente falando o sabor, e feche com a arte do kit e a garrafa de brinde.',['Reels','stories com enquete'],'vem comigo preparar minha Blessy'],
-    ['2026-10-31','sáb','','qual kit você levaria?','stories leves de fim de semana com a caixinha. quem responder, chame no direct.',['stories com caixinha'],'o que vem no kit de 3 potes'],
-    ['2026-11-01','dom','','a conta dos 4 meses','3 potes + 1 extra: faça a conta na tela.',['Reels ou carrossel'],'vem comigo fazer a conta do kit de 3'],
-    ['2026-11-02','seg','','a dor','conte como era antes da Blessy. a oferta entra só no final.',['Reels','stories'],'eu achava que era normal viver inchada'],
-    ['2026-11-03','ter','','a pergunta que você mais ouve','responda em vídeo a dúvida que mais chega pra você.',['Reels'],'"o que você tá tomando?"'],
+    ['2026-10-29','qui','open','abertura da etapa 1','dia de aparecer. sequência de abertura nos stories e o primeiro Reels da etapa.',['stories: abriu a Blessy Friday','Reels: o presente da etapa 1'],'olha o que vem no kit de 3 da Blessy Friday'],
+    ['2026-10-30','sex','','o preparo','prepare sua Blessy num copo transparente falando o sabor, e feche com a arte do kit e a garrafa de brinde.',['Reels','stories com enquete'],'como eu tomo minha Blessy todo dia'],
+    ['2026-10-31','sáb','','qual kit você levaria?','stories leves de fim de semana com a caixinha. quem responder, chame no direct.',['stories com caixinha'],'comprou, ganhou presente. vou te mostrar qual'],
+    ['2026-11-01','dom','','a conta dos 4 meses','3 potes + 1 extra: faça a conta na tela.',['Reels ou carrossel'],'por que eu nunca compro só 1 pote'],
+    ['2026-11-02','seg','','a dor','conte como era antes da Blessy. a oferta entra só no final.',['Reels','stories'],'eu vivia estufada no fim do dia e achava normal'],
+    ['2026-11-03','ter','','a pergunta que você mais ouve','responda em vídeo a dúvida que mais chega pra você.',['Reels'],'me perguntaram o que eu tô tomando, então lá vai'],
     ['2026-11-04','qua','','reagindo aos preços','a trend que funcionou na Black de 2025, kit por kit.',['Reels'],'reagindo aos preços da Blessy Friday'],
-    ['2026-11-05','qui','','o jeito certo de tomar','água gelada, mexer bem e beber logo. no final, lembre que a garrafa é enquanto durar.',['stories com contagem regressiva'],'se você toma sua Blessy assim, tá errado'],
+    ['2026-11-05','qui','','o jeito que eu tomo','água gelada, mexer bem e beber logo. no final, lembre que a garrafa é enquanto durar.',['stories com contagem regressiva'],'o jeito que eu mais gosto de tomar Blessy'],
     ['2026-11-06','sex','mes','a lista do mês','salário na conta e cartão virado: é quando muita gente organiza as compras do mês. mostre a Blessy entre o que não pode faltar.',['Reels','stories'],'a primeira coisa que entra na minha lista do mês'],
-    ['2026-11-07','sáb','mes','o kit mais caro sai mais barato','compare o avulso com o kit de 3, pote por pote.',['Reels ou carrossel'],'o kit mais caro é o que sai mais barato, eu te explico'],
-    ['2026-11-08','dom','mes','qual kit é o seu?','quiz nos stories: 1, 2 ou 3 potes. quem responder, chame no direct.',['stories com enquete','Reels'],'qual kit da Blessy tem a sua cara?'],
-    ['2026-11-09','seg','mes','3 motivos pra não deixar pra depois','a garrafa, o pote extra e o frete grátis. faltam 2 dias.',['Reels','stories'],'3 motivos pra você não deixar pra depois'],
-    ['2026-11-10','ter','','amanhã acaba','avise que no dia 11 saem a garrafa e o pote extra.',['stories com contagem regressiva','Reels'],'corre, que dia 11 isso aqui sai do kit'],
-    ['2026-11-11','qua','end','última chance','encerra às 23h59. prazo na tela o dia todo, várias vezes.',['stories ao longo do dia','Reels'],'a garrafa vai acabar e eu te avisei']
+    ['2026-11-07','sáb','mes','o kit mais caro sai mais barato','compare o avulso com o kit de 3, pote por pote.',['Reels ou carrossel'],'o kit mais caro sai mais barato, olha só'],
+    ['2026-11-08','dom','mes','qual kit é o seu?','quiz nos stories: 1, 2 ou 3 potes. quem responder, chame no direct.',['stories com enquete','Reels'],'se você fosse comprar hoje, levaria qual kit?'],
+    ['2026-11-09','seg','mes','3 motivos pra não deixar pra depois','a garrafa, o pote extra e o frete grátis. faltam 2 dias.',['Reels','stories'],'vale a pena comprar agora ou esperar?'],
+    ['2026-11-10','ter','','amanhã acaba','avise que no dia 11 saem a garrafa e o pote extra.',['stories com contagem regressiva','Reels'],'corre, que dia 11 a garrafa sai do kit'],
+    ['2026-11-11','qua','end','última chance','encerra às 23h59. prazo na tela o dia todo, várias vezes.',['stories ao longo do dia','Reels'],'hoje é o último dia pra ganhar a garrafa']
   ];
   var daysEl = document.getElementById('days'), card = document.getElementById('daycard');
   var todayBR = new Date(Date.now() - 3 * 3600 * 1000).toISOString().slice(0, 10);
