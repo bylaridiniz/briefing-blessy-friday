@@ -456,7 +456,8 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
 .stack > section.tint-y { background: var(--pink-soft); }
 .kit.hot { border-color: var(--deep); background: #fff; box-shadow: 0 0 0 1.5px var(--deep) inset; }
 .kit.hot .shelf { background: var(--pink-soft); }
-.kit h3 .g { background: linear-gradient(transparent 55%, var(--pink) 55%, var(--pink) 92%, transparent 92%); }
+.kit h3 .g { display: flex; align-items: center; gap: 6px; background: none; padding: 0; margin-top: 3px; color: var(--deep); font-size: 15px; }
+.kit h3 .g::before { content: ''; flex: none; width: 12px; height: 12px; background: var(--pink-2); clip-path: polygon(50% 0, 61% 30%, 93% 25%, 70% 50%, 93% 75%, 61% 70%, 50% 100%, 39% 70%, 7% 75%, 30% 50%, 7% 25%, 39% 30%); }
 .price span, .kit.hot .price span { background: var(--deep); color: var(--yellow); }
 .price b { font-family: var(--disp); font-weight: 700; font-size: 22px; }
 .howto .n, .nv-top .n, .cv ol li::before { background: var(--pink); }
