@@ -466,6 +466,9 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
 .nv-box { background: var(--pink-soft); }
 .hookline { border-left-color: var(--pink-2); }
 .day[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--deep); }
+.day:not(.k-open):not(.k-mes):not(.k-end):not(.empty) { border-color: transparent; background: transparent; color: var(--soft); font-weight: 500; }
+.day:not(.k-open):not(.k-mes):not(.k-end):not(.empty):hover { background: #f4f0e0; }
+.day:not(.k-open):not(.k-mes):not(.k-end):not(.empty)[aria-pressed="true"] { background: #f4f0e0; color: var(--ink); font-weight: 600; }
 .foot em { color: var(--deep); }
 .hero .cd-grid b, .hero .cd-grid span { color: var(--deep); }
 .jump { background: rgba(246,241,220,0.94) !important; }
