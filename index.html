@@ -205,7 +205,7 @@ h2 small { display: block; font-size: 13.5px; font-weight: 400; color: var(--sof
 
 /* cards soltos, id visual do convite */
 body { padding-block: 28px 48px; }
-.stack { max-width: 920px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
+.stack { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; }
 .stack > section { min-width: 0; background: var(--card); border-radius: 18px; padding: 28px 30px; box-shadow: 0 1px 2px rgba(30,42,36,0.04), 0 10px 28px -20px rgba(30,42,36,0.22); }
 .stack > section.hero { padding: 34px 30px 26px; }
 .hero .stamp { display: inline-block; background: var(--yellow); font-weight: 700; font-size: 13px; padding: 5px 12px; border-radius: 999px; margin-bottom: 16px; }
@@ -376,7 +376,7 @@ body { padding-block: 28px 48px; }
 
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
 .jump { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 6; margin: -8px calc(-1 * max(16px, env(safe-area-inset-left, 0px))) 18px; padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px)); background: rgba(237,245,227,0.92); backdrop-filter: blur(8px); }
-.jump-in { max-width: 920px; margin: 0 auto; display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.jump-in { max-width: 1060px; margin: 0 auto; display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
 .jump-in::-webkit-scrollbar { display: none; }
 .jump a { flex: none; font-size: 13px; font-weight: 600; color: var(--green-2); text-decoration: none; background: #fff; border-radius: 999px; padding: 7px 14px; box-shadow: 0 1px 2px rgba(47,90,70,0.08); }
 .jump a:hover { background: var(--yellow-soft); }
