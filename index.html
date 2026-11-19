@@ -466,6 +466,9 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
 .nv-box { background: var(--pink-soft); }
 .hookline { border-left-color: var(--pink-2); }
 .day[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--deep); }
+.day.off.off.off { border-color: transparent; background: transparent !important; color: #c6c9bf !important; font-weight: 500; cursor: default; display: grid; place-items: center; }
+.day.off.off.off:hover { background: transparent; }
+.days .day:not(.k-open):not(.k-mes):not(.k-end):not(.empty):not(.off) { color: var(--ink); font-weight: 600; }
 .day:not(.k-open):not(.k-mes):not(.k-end):not(.empty) { border-color: transparent; background: transparent; color: var(--soft); font-weight: 500; }
 .day:not(.k-open):not(.k-mes):not(.k-end):not(.empty):hover { background: #f4f0e0; }
 .day:not(.k-open):not(.k-mes):not(.k-end):not(.empty)[aria-pressed="true"] { background: #f4f0e0; color: var(--ink); font-weight: 600; }
@@ -810,11 +813,12 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
   var daysEl = document.getElementById('days'), card = document.getElementById('daycard');
   var todayBR = new Date(Date.now() - 3 * 3600 * 1000).toISOString().slice(0, 10);
   var html = ['dom','seg','ter','qua','qui','sex','sáb'].map(function (d) { return '<div class="dow">' + d + '</div>'; }).join('');
-  for (var k = 0; k < 5; k++) html += '<div class="day empty" aria-hidden="true"></div>';
+  for (var k = 1; k <= 19; k++) html += '<div class="day off" aria-hidden="true">' + (k < 10 ? '0' + k : k) + '</div>';
   plan.forEach(function (p, i) {
     var dd = p[0].slice(8, 10);
     html += '<button type="button" class="day' + (p[2] ? ' k-' + p[2] : '') + (p[0] === todayBR ? ' today' : '') + '" id="day-' + i + '" data-i="' + i + '" aria-pressed="false" aria-label="' + dd + '/' + p[0].slice(5, 7) + ': ' + p[3] + '">' + dd + '</button>';
   });
+  for (var k = 28; k <= 30; k++) html += '<div class="day off" aria-hidden="true">' + k + '</div>';
   daysEl.innerHTML = html;
   function show(i) {
     var p = plan[i];
