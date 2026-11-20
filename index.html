@@ -530,7 +530,7 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
 </svg>
 
 <div class="brand"><span class="b">Blessy</span><span class="f">Friday</span></div>
-<nav class="jump" aria-label="ir para"><div class="jump-in"><a href="#campanha" data-t="campanha">a campanha</a><a href="#pra-quem" data-t="pra-quem">pra quem é</a><a href="#oferta" data-t="oferta">a oferta</a><a href="#como-falar" data-t="como-falar">como falar</a><a href="#novatas" data-t="novatas">pra novatas</a><a href="#ganhos" data-t="ganhos">como ganhar</a><a href="#missoes" data-t="missoes">missões</a><a href="#ajuda" data-t="ajuda">tá perdida?</a><a href="#calendario" data-t="calendario">o que postar</a><a href="#comunicacoes" data-t="comunicacoes">comunicações-chave</a><a href="#regras" data-t="regras">antes de postar</a><a href="#ideias" data-t="ideias">banco de ideias</a></div></nav>
+<nav class="jump" aria-label="ir para"><div class="jump-in"><a href="#campanha" data-t="campanha">a campanha</a><a href="#oferta" data-t="oferta">a oferta</a><a href="#pra-quem" data-t="pra-quem">pra quem é</a><a href="#como-falar" data-t="como-falar">como falar</a><a href="#calendario" data-t="calendario">o que postar</a><a href="#comunicacoes" data-t="comunicacoes">comunicações-chave</a><a href="#ideias" data-t="ideias">banco de ideias</a><a href="#regras" data-t="regras">antes de postar</a><a href="#novatas" data-t="novatas">pra novatas</a><a href="#ganhos" data-t="ganhos">como ganhar</a><a href="#missoes" data-t="missoes">missões</a><a href="#ajuda" data-t="ajuda">tá perdida?</a></div></nav>
 
 <main class="stack">
     <section class="hero">
@@ -559,15 +559,6 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
       </div>
     </section>
 
-    <section id="pra-quem" class="tint-g">
-      <h2>pra quem é essa oferta<small>o racional por trás da etapa 2, pra você saber com quem falar</small></h2>
-      <div class="rows">
-        <div class="row"><span class="ic"><svg><use href="#i-gift"/></svg></span><div><h3>quem nunca provou</h3><p>o kit de 1 pote tem 10% off e vem com um pack de 5 sachês: dá pra conhecer os sabores logo de cara.</p></div></div>
-        <div class="row"><span class="ic"><svg><use href="#i-card"/></svg></span><div><h3>quem perdeu a primeira etapa</h3><p>a garrafa acabou, mas abriram outra oferta: até 23% off no kit de 3, e o seu cupom soma mais 5%.</p></div></div>
-        <div class="row"><span class="ic"><svg><use href="#i-box"/></svg></span><div><h3>quem já toma e quer estocar</h3><p>3 potes, 3 meses de Blessy, a R$ 138,20 por pote com o seu cupom.</p></div></div>
-      </div>
-    </section>
-
     <section id="oferta">
       <h2>a oferta da etapa 2<small>desconto em todos os kits, e cada um ainda leva presente</small></h2>
       <div class="kits">
@@ -590,6 +581,15 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
       <p class="fine fine-strong">o valor em destaque já tem o seu cupom · <span class="purp">pack de sachês com fórmula nova</span> · os presentes valem enquanto durarem os estoques</p>
     </section>
 
+    <section id="pra-quem" class="tint-g">
+      <h2>pra quem é essa oferta<small>o racional por trás da etapa 2, pra você saber com quem falar</small></h2>
+      <div class="rows">
+        <div class="row"><span class="ic"><svg><use href="#i-gift"/></svg></span><div><h3>quem nunca provou</h3><p>o kit de 1 pote tem 10% off e vem com um pack de 5 sachês: dá pra conhecer os sabores logo de cara.</p></div></div>
+        <div class="row"><span class="ic"><svg><use href="#i-card"/></svg></span><div><h3>quem perdeu a primeira etapa</h3><p>a garrafa acabou, mas abriram outra oferta: até 23% off no kit de 3, e o seu cupom soma mais 5%.</p></div></div>
+        <div class="row"><span class="ic"><svg><use href="#i-box"/></svg></span><div><h3>quem já toma e quer estocar</h3><p>3 potes, 3 meses de Blessy, a R$ 138,20 por pote com o seu cupom.</p></div></div>
+      </div>
+    </section>
+
     <section id="como-falar" class="tint-g talk-sec">
       <h2>como falar dessa etapa</h2>
       <div class="talk">
@@ -604,6 +604,94 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
         <div class="talk-title">frases prontas</div>
         <div class="phrases"><span>"voltou, e agora com desconto."</span><span>"perdeu a primeira? essa é a segunda chance."</span><span>"a garrafa acabou, mas abriram outra oferta."</span><span>"pediram tanto que voltou."</span><span>"e os sachês já vêm na fórmula nova."</span></div>
       </div>
+    </section>
+
+    <section id="calendario">
+      <h2>o que postar em cada dia<small>toque num dia pra ver a sugestão</small></h2>
+      <div class="legend">
+        <span><i style="background:var(--yellow)"></i>abertura</span>
+        <span><i style="background:var(--yellow-soft);box-shadow:0 0 0 1.5px var(--yellow)"></i>semana da Black</span>
+        <span><i style="background:var(--mint)"></i>Blessy Friday</span>
+      </div>
+      <div class="cal-wrap">
+        <div class="days" id="days"></div>
+        <div class="daycard" id="daycard" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="comunicacoes" class="tint-g">
+      <h2>comunicações-chave<small>a etapa 1 acabou com a garrafa esgotada. a etapa 2 é a segunda chance: conte isso</small></h2>
+      <div class="scripts">
+        <div class="script">
+          <div class="kind">Reels · 30 a 45s</div>
+          <h3>a segunda chance</h3>
+          <ol class="steps">
+            <li data-n="1"><span><b>gancho:</b> "lembra que eu falei que ia acabar? então, voltou." falado e escrito na tela.</span></li>
+            <li data-n="2"><span><b>o bastidor:</b> a garrafa acabou rapidinho e, de tanto pedirem, a Blessy abriu outra oferta, agora com desconto.</span></li>
+            <li data-n="3"><span><b>você e a Blessy:</b> prepare no copo transparente e diga em uma frase o que ela faz no seu dia.</span></li>
+            <li data-n="4"><span><b>a oferta:</b> a arte dos kits, o valor final com o seu cupom e o presente de cada um.</span></li>
+            <li data-n="5"><span><b>CTA:</b> "vai até 27/11 e os presentes acabam antes. link e cupom aqui."</span></li>
+          </ol>
+        </div>
+        <div class="script">
+          <div class="kind">stories · 4 telas</div>
+          <h3>voltou</h3>
+          <ol class="steps">
+            <li data-n="1"><span><b>tom de novidade:</b> "lembra da Black da Blessy? voltou." em vídeo, com seu rosto.</span></li>
+            <li data-n="2"><span><b>o porquê:</b> "a garrafa esgotou e abriram outra oferta de tanto que pediram."</span></li>
+            <li data-n="3"><span><b>a oferta:</b> sticker dos kits, com o valor já com o seu cupom e o presente de cada um.</span></li>
+            <li data-n="4"><span><b>CTA:</b> link + cupom escrito + caixinha "perdeu a primeira? me conta qual kit você quer".</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="ideias">
+      <h2>banco de ideias<small>marque o que você já postou e veja o quanto já fez na etapa</small></h2>
+      <div class="cv">
+        <div class="cv-title">como usar</div>
+        <ol>
+          <li>escolha um gancho da lista.</li>
+          <li>fale ele logo no começo do vídeo e escreva a mesma frase na tela.</li>
+          <li>postou? marque o check pra acompanhar quantos você já fez.</li>
+        </ol>
+      </div>
+      <div class="progress"><div class="pbar"><i id="p-bar"></i></div><b id="p-count">0 de 22 postados</b></div>
+      <div class="filters" role="group" aria-label="filtrar ideias" id="filters"></div>
+      <ul class="ideas" id="ideas"></ul>
+    </section>
+
+    <section id="regras">
+      <h2>antes de postar</h2>
+      <div class="rules">
+        <div>
+          <h3>não pode faltar</h3>
+          <ul>
+            <li>cupom escrito em tela + link</li>
+            <li>@oiblessy marcado no post</li>
+            <li>Blessynha em close, sem filtro, em copo transparente</li>
+            <li>seu rosto em pelo menos uma cena</li>
+            <li>o sabor da Blessynha mostrada</li>
+            <li>o valor final com o seu cupom</li>
+            <li>"enquanto durar" ao falar dos presentes</li>
+            <li>a garantia de 30 dias</li>
+          </ul>
+        </div>
+        <div class="no">
+          <h3>nesta campanha, não</h3>
+          <ul>
+            <li>prometer emagrecimento, cura ou resultado em X dias</li>
+            <li>prometer o boné ou a presilha garantidos</li>
+            <li>copo de plástico ou xícara sem transparência</li>
+            <li>filtro forte ou cores muito saturadas</li>
+            <li>falar o preço sem cupom como se fosse o final</li>
+            <li>dizer que a garrafa ainda vem no kit</li>
+            <li>prometer prazo de entrega</li>
+            <li>comparar com outras marcas</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine collab-note">sobre collab: pode convidar a @oiblessy, mas o aceite não é automático. depois que você posta, a social media analisa o conteúdo e aceita os que seguem este briefing.</p>
     </section>
 
     <section id="novatas">
@@ -695,94 +783,6 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
         <div class="row"><span class="ic"><svg><use href="#i-bulb"/></svg></span><div><h3>a IA do app de Creators</h3><p>pra montar narrativa e roteiro: conta a sua ideia e pede ajuda pra transformar em vídeo.</p></div></div>
         <div class="row"><span class="ic"><svg><use href="#i-chat"/></svg></span><div><h3>acompanhamento 1 a 1</h3><p>travou em algum conteúdo, ficou com dúvida da oferta ou não está vendendo como queria? me chama no privado que a gente resolve junto.</p></div></div>
       </div>
-    </section>
-
-    <section id="calendario">
-      <h2>o que postar em cada dia<small>toque num dia pra ver a sugestão</small></h2>
-      <div class="legend">
-        <span><i style="background:var(--yellow)"></i>abertura</span>
-        <span><i style="background:var(--yellow-soft);box-shadow:0 0 0 1.5px var(--yellow)"></i>semana da Black</span>
-        <span><i style="background:var(--mint)"></i>Blessy Friday</span>
-      </div>
-      <div class="cal-wrap">
-        <div class="days" id="days"></div>
-        <div class="daycard" id="daycard" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <section id="comunicacoes" class="tint-g">
-      <h2>comunicações-chave<small>a etapa 1 acabou com a garrafa esgotada. a etapa 2 é a segunda chance: conte isso</small></h2>
-      <div class="scripts">
-        <div class="script">
-          <div class="kind">Reels · 30 a 45s</div>
-          <h3>a segunda chance</h3>
-          <ol class="steps">
-            <li data-n="1"><span><b>gancho:</b> "lembra que eu falei que ia acabar? então, voltou." falado e escrito na tela.</span></li>
-            <li data-n="2"><span><b>o bastidor:</b> a garrafa acabou rapidinho e, de tanto pedirem, a Blessy abriu outra oferta, agora com desconto.</span></li>
-            <li data-n="3"><span><b>você e a Blessy:</b> prepare no copo transparente e diga em uma frase o que ela faz no seu dia.</span></li>
-            <li data-n="4"><span><b>a oferta:</b> a arte dos kits, o valor final com o seu cupom e o presente de cada um.</span></li>
-            <li data-n="5"><span><b>CTA:</b> "vai até 27/11 e os presentes acabam antes. link e cupom aqui."</span></li>
-          </ol>
-        </div>
-        <div class="script">
-          <div class="kind">stories · 4 telas</div>
-          <h3>voltou</h3>
-          <ol class="steps">
-            <li data-n="1"><span><b>tom de novidade:</b> "lembra da Black da Blessy? voltou." em vídeo, com seu rosto.</span></li>
-            <li data-n="2"><span><b>o porquê:</b> "a garrafa esgotou e abriram outra oferta de tanto que pediram."</span></li>
-            <li data-n="3"><span><b>a oferta:</b> sticker dos kits, com o valor já com o seu cupom e o presente de cada um.</span></li>
-            <li data-n="4"><span><b>CTA:</b> link + cupom escrito + caixinha "perdeu a primeira? me conta qual kit você quer".</span></li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section id="regras">
-      <h2>antes de postar</h2>
-      <div class="rules">
-        <div>
-          <h3>não pode faltar</h3>
-          <ul>
-            <li>cupom escrito em tela + link</li>
-            <li>@oiblessy marcado no post</li>
-            <li>Blessynha em close, sem filtro, em copo transparente</li>
-            <li>seu rosto em pelo menos uma cena</li>
-            <li>o sabor da Blessynha mostrada</li>
-            <li>o valor final com o seu cupom</li>
-            <li>"enquanto durar" ao falar dos presentes</li>
-            <li>a garantia de 30 dias</li>
-          </ul>
-        </div>
-        <div class="no">
-          <h3>nesta campanha, não</h3>
-          <ul>
-            <li>prometer emagrecimento, cura ou resultado em X dias</li>
-            <li>prometer o boné ou a presilha garantidos</li>
-            <li>copo de plástico ou xícara sem transparência</li>
-            <li>filtro forte ou cores muito saturadas</li>
-            <li>falar o preço sem cupom como se fosse o final</li>
-            <li>dizer que a garrafa ainda vem no kit</li>
-            <li>prometer prazo de entrega</li>
-            <li>comparar com outras marcas</li>
-          </ul>
-        </div>
-      </div>
-      <p class="fine collab-note">sobre collab: pode convidar a @oiblessy, mas o aceite não é automático. depois que você posta, a social media analisa o conteúdo e aceita os que seguem este briefing.</p>
-    </section>
-
-    <section id="ideias">
-      <h2>banco de ideias<small>marque o que você já postou e veja o quanto já fez na etapa</small></h2>
-      <div class="cv">
-        <div class="cv-title">como usar</div>
-        <ol>
-          <li>escolha um gancho da lista.</li>
-          <li>fale ele logo no começo do vídeo e escreva a mesma frase na tela.</li>
-          <li>postou? marque o check pra acompanhar quantos você já fez.</li>
-        </ol>
-      </div>
-      <div class="progress"><div class="pbar"><i id="p-bar"></i></div><b id="p-count">0 de 22 postados</b></div>
-      <div class="filters" role="group" aria-label="filtrar ideias" id="filters"></div>
-      <ul class="ideas" id="ideas"></ul>
     </section>
 
     <p class="foot">qualquer dúvida, chama a <a class="wa" href="https://wa.me/5531990698668" target="_blank" rel="noopener"><em>Lari</em></a> ou a <a class="wa" href="https://wa.me/5519998106402" target="_blank" rel="noopener"><em>Gi</em></a></p>
