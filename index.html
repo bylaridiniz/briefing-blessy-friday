@@ -162,7 +162,7 @@ h2 small { display: block; font-size: 13.5px; font-weight: 400; color: var(--sof
 .progress .pbar { flex: 1; height: 8px; background: var(--tile); border-radius: 999px; overflow: hidden; }
 .progress .pbar i { display: block; height: 100%; width: 0; background: var(--green); border-radius: 999px; transition: width .3s; }
 .progress b { font-size: 13px; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.filters { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 12px; scrollbar-width: none; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; padding-bottom: 4px; margin-bottom: 12px; }
 .filters::-webkit-scrollbar { display: none; }
 .filters button { flex: none; font-family: var(--sans); font-size: 12.5px; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 1.5px solid var(--line); background: #fff; color: var(--soft); cursor: pointer; }
 .filters button[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: #fff; }
@@ -848,7 +848,7 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
       try { navigator.clipboard.writeText(ideas[i][2]).then(ok, fb); } catch (err) { fb(); }
     }
   });
-  var types = ['todos'];
+  var types = [];
   ideas.forEach(function (h) { if (types.indexOf(h[0]) < 0) types.push(h[0]); });
   var fEl = document.getElementById('filters');
   fEl.innerHTML = types.map(function (t, i) { return '<button type="button" id="filter-' + i + '" data-f="' + t + '" aria-pressed="' + (i === 0) + '">' + t + '</button>'; }).join('');
@@ -858,6 +858,7 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
     fEl.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
     list.querySelectorAll('.idea').forEach(function (li) { li.hidden = !(f === 'todos' || li.getAttribute('data-t') === f); });
   });
+  list.querySelectorAll('.idea').forEach(function (li) { li.hidden = li.getAttribute('data-t') !== types[0]; });
 
   var plan = [
     ['2026-11-20','sex','open','abertura: a segunda chance','é feriado, então capriche nos stories. conte que a garrafa esgotou e que abriram outra oferta, agora com desconto.',['stories: voltou','Reels: a segunda chance'],'lembra que eu falei que ia acabar? então, voltou'],
