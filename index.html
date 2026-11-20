@@ -421,6 +421,22 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (max-width: 700px) { .nv-intro, .nv-list { grid-template-columns: 1fr; } }
 
 /* etapa 2: tema próprio */
+#missoes { background: var(--deep); color: #fff7e0; }
+#missoes h2 { color: #fff7e0; }
+#missoes h2 small { color: rgba(255,247,224,0.75); }
+.ms-list { display: grid; gap: 12px; }
+.ms { border-radius: 20px; padding: 20px 22px; color: var(--deep); }
+.ms-y { background: var(--yellow); } .ms-p { background: var(--pink); } .ms-c { background: #fff7e0; }
+.ms-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.ms-k { font-size: 11.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+.ms-d { background: var(--deep); color: var(--yellow); font-weight: 700; font-size: 13px; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
+.ms-c .ms-d { background: var(--tile); color: var(--deep); }
+.ms h3 { font-family: var(--disp); font-weight: 700; font-size: 30px; letter-spacing: -0.02em; line-height: 1.05; margin: 10px 0 8px; }
+.ms h3 em { font-family: var(--accent); font-style: italic; font-weight: 600; }
+.ms p { font-size: 14.5px; line-height: 1.5; color: var(--ink); }
+.ms-pr { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 12px; padding-top: 10px; border-top: 1px solid rgba(31,74,53,0.18); font-size: 13.5px; color: var(--ink); }
+@media (max-width: 600px) { .ms { padding: 16px; } .ms h3 { font-size: 25px; } }
+
 .price .nc { display: block; font-size: 12px; color: var(--soft); }
 .price .pp { white-space: nowrap; }
 a.wa { color: var(--deep); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
@@ -514,7 +530,7 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
 </svg>
 
 <div class="brand"><span class="b">Blessy</span><span class="f">Friday</span></div>
-<nav class="jump" aria-label="ir para"><div class="jump-in"><a href="#campanha" data-t="campanha">a campanha</a><a href="#pra-quem" data-t="pra-quem">pra quem é</a><a href="#oferta" data-t="oferta">a oferta</a><a href="#como-falar" data-t="como-falar">como falar</a><a href="#novatas" data-t="novatas">pra novatas</a><a href="#ganhos" data-t="ganhos">como ganhar</a><a href="#ajuda" data-t="ajuda">tá perdida?</a><a href="#calendario" data-t="calendario">o que postar</a><a href="#comunicacoes" data-t="comunicacoes">comunicações-chave</a><a href="#regras" data-t="regras">antes de postar</a><a href="#ideias" data-t="ideias">banco de ideias</a></div></nav>
+<nav class="jump" aria-label="ir para"><div class="jump-in"><a href="#campanha" data-t="campanha">a campanha</a><a href="#pra-quem" data-t="pra-quem">pra quem é</a><a href="#oferta" data-t="oferta">a oferta</a><a href="#como-falar" data-t="como-falar">como falar</a><a href="#novatas" data-t="novatas">pra novatas</a><a href="#missoes" data-t="missoes">missões</a><a href="#ganhos" data-t="ganhos">como ganhar</a><a href="#ajuda" data-t="ajuda">tá perdida?</a><a href="#calendario" data-t="calendario">o que postar</a><a href="#comunicacoes" data-t="comunicacoes">comunicações-chave</a><a href="#regras" data-t="regras">antes de postar</a><a href="#ideias" data-t="ideias">banco de ideias</a></div></nav>
 
 <main class="stack">
     <section class="hero">
@@ -602,6 +618,30 @@ h2::before { content: ''; flex: none; width: 15px; height: 15px; background: var
         <div class="nv"><div class="nv-top"><span class="n">2</span><h3>por que eu topei ser Creator da Blessy</h3></div><p>o que te chamou atenção na marca. termine chamando quem quer testar junto, com o kit de 1 pote e os 5 sachês.</p><div class="hookline">"eu não falo de qualquer coisa aqui, então deixa eu explicar"</div><span class="nv-tag">dá pra fazer sem o produto</span></div>
         <div class="nv"><div class="nv-top"><span class="n">3</span><h3>o que eu quero mudar no meu dia</h3></div><p>fale de algo real seu (fim do dia estufada, digestão, cansaço) e apresente a Blessy como o que você vai testar. a oferta entra no final.</p><div class="hookline">"cansei de terminar o dia estufada, então vou testar isso"</div><span class="nv-tag">dá pra fazer sem o produto</span></div>
         <div class="nv"><div class="nv-top"><span class="n">4</span><h3>chegou, vem abrir comigo</h3></div><p>abra o pote com a câmera ligada, mostre o pó, prepare no copo transparente e prove. no fim, mostre o kit da Black.</p><div class="hookline">"chegou e eu vou abrir com vocês"</div></div>
+      </div>
+    </section>
+
+    <section id="missoes">
+      <h2>missões da etapa 2<small>3 campanhas novas valendo agora, além das que já estavam rolando. é só entrar pelo app de Creators › campanhas</small></h2>
+      <div class="ms-list">
+        <div class="ms ms-y">
+          <div class="ms-top"><span class="ms-k">missão 01</span><span class="ms-d">20 e 21/11</span></div>
+          <h3>melhor push</h3>
+          <p>a sequência de stories de venda mais completa: gancho, storytelling, informações da oferta e CTA com link. <b>o time escolhe as ganhadoras.</b></p>
+          <div class="ms-pr"><span><b>1º</b> presskit Blessy</span><span><b>2º</b> necessaire</span><span><b>3º</b> garrafa de vidro</span><span><b>4º e 5º</b> voucher Avvi</span></div>
+        </div>
+        <div class="ms ms-p">
+          <div class="ms-top"><span class="ms-k">missão 02</span><span class="ms-d">20 e 21/11</span></div>
+          <h3>corrida <em>relâmpago</em></h3>
+          <p>quem mais vender com o seu cupom em 48h. <b>cada R$ 1 vendido vale 1 ponto.</b></p>
+          <div class="ms-pr"><span><b>1º</b> presskit Blessy</span><span><b>2º</b> necessaire</span><span><b>3º</b> garrafa de vidro</span><span><b>4º e 5º</b> voucher Avvi</span></div>
+        </div>
+        <div class="ms ms-c">
+          <div class="ms-top"><span class="ms-k">missão 03</span><span class="ms-d">20 a 27/11</span></div>
+          <h3>corrida de stories</h3>
+          <p>quem mais postar stories da Blessy marcando a @oiblessy. <b>1 ponto por story, até 7 por dia.</b></p>
+          <div class="ms-pr"><span><b>1º</b> R$ 350 no pix</span><span><b>2º</b> voucher de R$ 200 na Avvi</span><span><b>3º</b> presskit Blessy</span></div>
+        </div>
       </div>
     </section>
 
